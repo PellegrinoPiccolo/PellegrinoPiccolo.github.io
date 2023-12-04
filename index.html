@@ -10,10 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Wellfleet&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="homePage">
-        <nav>
+        <nav id="nav">
             <div class="NavbarItem">
                 <img src="Logo_github-removeBG.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo">
                 <div class="navLink">
@@ -23,7 +24,7 @@
                     <p>Contact</p>
                 </div>
                 <div class="buttonGithub">
-                    <button class="githubButton">
+                    <button class="githubButton" onclick="window.open('https://github.com/PellegrinoPiccolo/')">
                         <iconify-icon class="iconGithub" icon="tdesign:logo-github-filled" style="color: white;"></iconify-icon>
                         <p>Github</p>
                     </button>
@@ -45,4 +46,14 @@
         </div>
     </div>
 </body>
+<script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop >500) {
+            document.getElementById("nav").classList.add("navScroll")
+        } else {
+            document.getElementById("nav").classList.remove("navScroll")
+        }
+    }
+</script>
 </html>
