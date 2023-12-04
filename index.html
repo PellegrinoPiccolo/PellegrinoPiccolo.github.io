@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Wellfleet&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="homePage">
+    <div class="homePage page">
         <nav id="nav">
             <div class="NavbarItem">
                 <img src="Logo_github-removeBG.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo">
@@ -45,11 +45,14 @@
             </div>
         </div>
     </div>
+    <div class="aboutMe page">
+        
+    </div>
 </body>
 <script>
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
-        if (document.body.scrollTop > 500 || document.documentElement.scrollTop >500) {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
             document.getElementById("nav").classList.add("navScroll")
         } else {
             document.getElementById("nav").classList.remove("navScroll")

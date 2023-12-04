@@ -3,12 +3,13 @@ body{
     margin: 0;
 }
 
-.homePage{
-    position: absolute;
-    top:0;
+.page{
     width:100%;
-    height:120vh;
+    height:100vh;
     margin:0 !important;
+}
+
+.homePage{
     background: #060010;
     background-blend-mode: normal;
     padding:18em 0 0 0;
@@ -21,7 +22,7 @@ body{
         padding: 10px 5%;
         border-radius: 74px;
         background-color: #060010;
-        transition: all .2s ease-in-out !important;
+        transition: all .6s ease-in-out !important;
         .NavbarItem{
             width:100%;
             display: flex;
@@ -91,6 +92,8 @@ body{
             img{
                 width:160px !important;
                 height:100px !important;
+                position: relative;
+                top:.5em;
             }
             .navLink{
                 p{
@@ -148,4 +151,8 @@ body{
             }
         }
     }
+}
+
+.aboutMe{
+    background-color: #451578;
 }

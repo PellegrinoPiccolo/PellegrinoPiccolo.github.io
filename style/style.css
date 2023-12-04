@@ -3,12 +3,13 @@ body {
   margin: 0;
 }
 
-.homePage {
-  position: absolute;
-  top: 0;
+.page {
   width: 100%;
-  height: 120vh;
+  height: 100vh;
   margin: 0 !important;
+}
+
+.homePage {
   background: #060010;
   background-blend-mode: normal;
   padding: 18em 0 0 0;
@@ -22,7 +23,7 @@ body {
   padding: 10px 5%;
   border-radius: 74px;
   background-color: #060010;
-  transition: all 0.2s ease-in-out !important;
+  transition: all 0.6s ease-in-out !important;
 }
 .homePage nav .NavbarItem {
   width: 100%;
@@ -88,6 +89,8 @@ body {
 .homePage .navScroll .NavbarItem img {
   width: 160px !important;
   height: 100px !important;
+  position: relative;
+  top: 0.5em;
 }
 .homePage .navScroll .NavbarItem .navLink p {
   font-size: 22px !important;
@@ -137,4 +140,8 @@ body {
 .homePage .firstSectionHome .textSection button:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.aboutMe {
+  background-color: #451578;
 }/*# sourceMappingURL=style.css.map */
