@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Wellfleet&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="homePage page background1" id="home">
@@ -57,7 +56,6 @@
     </div>
 </body>
 <script>
-    src="jquery-3.7.1.min.js"
     function onScreen(elem, allowElemBehind = false, allowElemAhead = false) {
         const scrollDist = document.documentElement.scrollTop;
         const elemOffset = window.scrollY + elem.getBoundingClientRect().top; 
@@ -70,9 +68,10 @@
 
         return true;
     }
+    var navPos = document.getElementById("nav").getBoundingClientRect().top;
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        if (document.body.scrollTop > (navPos + 100) || document.documentElement.scrollTop > (navPos + 100)) {
             document.getElementById("nav").classList.add("navScroll")
         } else {
             document.getElementById("nav").classList.remove("navScroll")
