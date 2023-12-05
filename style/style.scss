@@ -59,7 +59,7 @@ body{
                 }
                 p:hover{
                     cursor: pointer;
-                    text-decoration: underline;
+                    color:#451578 !important;
                 }
             }
             .buttonGithub{
@@ -162,6 +162,6 @@ body{
 }
 
 .active{
-    text-decoration: underline !important;
+    //text-decoration: underline !important;
     color:#9796E8 !important;
 }

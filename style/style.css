@@ -62,7 +62,7 @@ body {
 }
 .homePage nav .NavbarItem .navLink p:hover {
   cursor: pointer;
-  text-decoration: underline;
+  color: #451578 !important;
 }
 .homePage nav .NavbarItem .buttonGithub .githubButton {
   top: 3em;
@@ -150,6 +150,5 @@ body {
 }
 
 .active {
-  text-decoration: underline !important;
   color: #9796E8 !important;
 }/*# sourceMappingURL=style.css.map */

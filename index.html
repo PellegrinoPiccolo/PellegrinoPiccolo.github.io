@@ -16,7 +16,7 @@
     <div class="homePage page background1" id="home">
         <nav id="nav">
             <div class="NavbarItem">
-                <img src="Logo_github-removeBG.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo">
+                <img src="Logo_github-removeBG.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo" onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'})">
                 <div class="navLink">
                     <p onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'})" id="HomeLink">Home</p>
                     <p onclick="document.getElementById('aboutPage').scrollIntoView({behavior: 'smooth'})">About me</p>
@@ -37,7 +37,7 @@
                 <p class="topTitle">My Name is <span>Pellegrino Piccolo</span></p>
                 <p class="subTitle" style=" color: rgba(255,255,255,0.6);">I'm a computer science studente</p>
                 <button>
-                    <p>About me</p>
+                    <p onclick="document.getElementById('aboutPage').scrollIntoView({behavior: 'smooth'})">About me</p>
                 </button>
             </div>
             <div class="imageSection">
@@ -69,6 +69,11 @@
         return true;
     }
     var navPos = document.getElementById("nav").getBoundingClientRect().top;
+    document.addEventListener("DOMContentLoaded", () => {
+        if(onScreen(document.getElementById("sectionHome"))){
+            document.getElementById("HomeLink").classList.add("active");
+        }
+    });
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
         if (document.body.scrollTop > (navPos + 100) || document.documentElement.scrollTop > (navPos + 100)) {
