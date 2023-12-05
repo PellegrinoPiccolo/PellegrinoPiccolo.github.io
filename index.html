@@ -13,15 +13,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Wellfleet&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="homePage page">
+    <div class="homePage page background1" id="home">
         <nav id="nav">
             <div class="NavbarItem">
                 <img src="Logo_github-removeBG.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo">
                 <div class="navLink">
-                    <p>Home</p>
-                    <p>About me</p>
-                    <p>Blog</p>
-                    <p>Contact</p>
+                    <p onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'})">Home</p>
+                    <p onclick="document.getElementById('aboutPage').scrollIntoView({behavior: 'smooth'})">About me</p>
+                    <p onclick="document.getElementById('blogPage').scrollIntoView({behavior: 'smooth'})">Blog</p>
+                    <p onclick="document.getElementById('contactPage').scrollIntoView({behavior: 'smooth'})">Contact</p>
                 </div>
                 <div class="buttonGithub">
                     <button class="githubButton" onclick="window.open('https://github.com/PellegrinoPiccolo/')">
@@ -45,8 +45,14 @@
             </div>
         </div>
     </div>
-    <div class="aboutMe page">
+    <div class="aboutMe page background2" id="aboutPage">
         
+    </div>
+    <div class="blog page background1" id="blogPage">
+
+    </div>
+    <div class="contacts page background2" id="contactPage">
+
     </div>
 </body>
 <script>

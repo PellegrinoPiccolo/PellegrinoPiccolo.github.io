@@ -9,8 +9,15 @@ body {
   margin: 0 !important;
 }
 
-.homePage {
+.background1 {
   background: #060010;
+}
+
+.background2 {
+  background: #451578;
+}
+
+.homePage {
   background-blend-mode: normal;
   padding: 18em 0 0 0;
 }
@@ -140,8 +147,4 @@ body {
 .homePage .firstSectionHome .textSection button:hover {
   transform: scale(1.1);
   cursor: pointer;
-}
-
-.aboutMe {
-  background-color: #451578;
 }/*# sourceMappingURL=style.css.map */

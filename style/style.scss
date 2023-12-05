@@ -9,8 +9,15 @@ body{
     margin:0 !important;
 }
 
-.homePage{
+.background1{
     background: #060010;
+}
+.background2{
+    background: #451578;
+}
+
+.homePage{
+    //background: #060010;
     background-blend-mode: normal;
     padding:18em 0 0 0;
     nav{
@@ -150,9 +157,10 @@ body{
                 cursor: pointer;
             }
         }
+        //la classe imageSection non serve perchè l'immagine va' già bene su desktop
     }
 }
 
 .aboutMe{
-    background-color: #451578;
+    //background-color: #451578;
 }
