@@ -95,6 +95,7 @@ body{
         //border: 2px solid white !important;
         position: fixed !important;
         top:.5em !important;
+        z-index: 1 !important;
         .NavbarItem{
             img{
                 width:160px !important;
@@ -158,6 +159,56 @@ body{
             }
         }
         //la classe imageSection non serve perchè l'immagine va' già bene su desktop
+    }
+}
+
+.aboutMe{
+    padding-top: 8em;
+    .presentation{
+        width:82%;
+        margin: 0 4%;
+        padding: 0 5%;
+        display:flex;
+        justify-content: space-between;
+        .textSection{
+            background: #060010;
+            padding:20px;
+            width:400px;
+            height: auto;
+            text-wrap: wrap;
+            border-radius:20px;
+            p{
+                color:white;
+                font-size:20px;
+                font-family: 'Inconsolata', monospace;
+                margin:.5em 0;
+                font-weight: 100;
+                span{
+                    color:#9796E8;
+                }
+                span:hover{
+                    text-decoration: underline;
+                    cursor:pointer;
+                }
+            }
+            
+        }
+        .imageSection{
+            position:relative;
+            img{
+                width:580px;
+                margin:0;
+                position:absolute;
+                border-radius: 10px;
+            }
+            #imageKeibenHome{
+                right:3em;
+            }
+            #imageKeibenProduct{
+                right:1.2em;
+                top:4.8em;
+            }
+        }
     }
 }
 

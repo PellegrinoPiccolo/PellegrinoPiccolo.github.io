@@ -19,9 +19,9 @@
                 <img src="Logo_github-removeBG.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo" onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'})">
                 <div class="navLink">
                     <p onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'})" id="HomeLink">Home</p>
-                    <p onclick="document.getElementById('aboutPage').scrollIntoView({behavior: 'smooth'})">About me</p>
-                    <p onclick="document.getElementById('blogPage').scrollIntoView({behavior: 'smooth'})">Blog</p>
-                    <p onclick="document.getElementById('contactPage').scrollIntoView({behavior: 'smooth'})">Contact</p>
+                    <p onclick="document.getElementById('aboutPage').scrollIntoView({behavior: 'smooth'})" id="AboutLink">About me</p>
+                    <p onclick="document.getElementById('blogPage').scrollIntoView({behavior: 'smooth'})" id="BlockLink">Blog</p>
+                    <p onclick="document.getElementById('contactPage').scrollIntoView({behavior: 'smooth'})" id="ContactLink">Contact</p>
                 </div>
                 <div class="buttonGithub">
                     <button class="githubButton" onclick="window.open('https://github.com/PellegrinoPiccolo/')">
@@ -31,9 +31,9 @@
                 </div>
             </div>
         </nav>
-        <div class="firstSectionHome" id="sectionHome">
+        <div class="firstSectionHome">
             <div class="textSection">
-                <p class="subTitle">Hi There!</p>
+                <p class="subTitle" id="sectionHome">Hi There!</p>
                 <p class="topTitle">My Name is <span>Pellegrino Piccolo</span></p>
                 <p class="subTitle" style=" color: rgba(255,255,255,0.6);">I'm a computer science studente</p>
                 <button>
@@ -41,12 +41,21 @@
                 </button>
             </div>
             <div class="imageSection">
-                <img src="codeimage.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo">
+                <img src="image/codeimage.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo">
             </div>
         </div>
     </div>
     <div class="aboutMe page background2" id="aboutPage">
-        
+        <div class="presentation" id="sectionAbout">
+            <div class="textSection">
+                <p>> Hi there! My name is <span>Pellegrino Piccolo</span></p>
+                <p>> I graduated with the title of <span>"IT expert"</span></p>
+            </div>
+            <div class="imageSection">
+                <img src="image/keiben_home.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo" id="imageKeibenHome">
+                <img src="image/keiben_product.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo" id="imageKeibenProduct">
+            </div>
+        </div>
     </div>
     <div class="blog page background1" id="blogPage">
 
@@ -81,11 +90,15 @@
         } else {
             document.getElementById("nav").classList.remove("navScroll")
         }
-        var elem = document.getElementById("sectionHome");
-        if(onScreen(elem)){
+        if(onScreen(document.getElementById("sectionHome"))){
             document.getElementById("HomeLink").classList.add("active");
         }else{
             document.getElementById("HomeLink").classList.remove("active");
+        }
+        if(onScreen(document.getElementById("sectionAbout"))){
+            document.getElementById("AboutLink").classList.add("active");
+        }else{
+            document.getElementById("AboutLink").classList.remove("active");
         }
     }
 </script>

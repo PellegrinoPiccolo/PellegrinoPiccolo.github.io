@@ -92,6 +92,7 @@ body {
   padding: 1px 5% !important;
   position: fixed !important;
   top: 0.5em !important;
+  z-index: 1 !important;
 }
 .homePage .navScroll .NavbarItem img {
   width: 160px !important;
@@ -147,6 +148,55 @@ body {
 .homePage .firstSectionHome .textSection button:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.aboutMe {
+  padding-top: 8em;
+}
+.aboutMe .presentation {
+  width: 82%;
+  margin: 0 4%;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.aboutMe .presentation .textSection {
+  background: #060010;
+  padding: 20px;
+  width: 400px;
+  height: auto;
+  text-wrap: wrap;
+  border-radius: 20px;
+}
+.aboutMe .presentation .textSection p {
+  color: white;
+  font-size: 20px;
+  font-family: "Inconsolata", monospace;
+  margin: 0.5em 0;
+  font-weight: 100;
+}
+.aboutMe .presentation .textSection p span {
+  color: #9796E8;
+}
+.aboutMe .presentation .textSection p span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.aboutMe .presentation .imageSection {
+  position: relative;
+}
+.aboutMe .presentation .imageSection img {
+  width: 580px;
+  margin: 0;
+  position: absolute;
+  border-radius: 10px;
+}
+.aboutMe .presentation .imageSection #imageKeibenHome {
+  right: 3em;
+}
+.aboutMe .presentation .imageSection #imageKeibenProduct {
+  right: 1.2em;
+  top: 4.8em;
 }
 
 .active {
