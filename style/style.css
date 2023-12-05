@@ -207,10 +207,32 @@ body {
   top: 20em;
 }
 
+.blog {
+  padding-top: 8em;
+}
+.blog .titleSection {
+  width: 82%;
+  margin: 0 4%;
+  padding: 0 5%;
+  display: flex;
+  margin: 0 !important;
+}
+.blog .titleSection p {
+  color: white;
+  margin: 0 4em 0 0;
+  font-family: "Inconsolata", monospace;
+  font-size: 40px;
+  cursor: pointer;
+}
+
 .active {
   color: #9796E8 !important;
 }
 
 img {
   pointer-events: none;
+}
+
+.hidden {
+  opacity: 0 !important;
 }/*# sourceMappingURL=style.css.map */

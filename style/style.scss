@@ -220,6 +220,24 @@ body{
     }
 }
 
+.blog{
+    padding-top: 8em;
+    .titleSection{
+        width:82%;
+        margin: 0 4%;
+        padding: 0 5%;
+        display:flex;
+        margin:0 !important;
+        p{
+            color: white;
+            margin:0 4em 0 0;
+            font-family: 'Inconsolata', monospace;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    }
+}
+
 .active{
     //text-decoration: underline !important;
     color:#9796E8 !important;
@@ -227,4 +245,8 @@ body{
 
 img{
     pointer-events: none;
+}
+
+.hidden{
+    opacity:0 !important;
 }
