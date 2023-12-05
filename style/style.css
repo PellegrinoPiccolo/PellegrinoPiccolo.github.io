@@ -147,4 +147,9 @@ body {
 .homePage .firstSectionHome .textSection button:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.active {
+  text-decoration: underline !important;
+  color: #9796E8 !important;
 }/*# sourceMappingURL=style.css.map */

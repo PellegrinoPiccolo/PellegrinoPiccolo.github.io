@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Wellfleet&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="homePage page background1" id="home">
@@ -18,7 +19,7 @@
             <div class="NavbarItem">
                 <img src="Logo_github-removeBG.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo">
                 <div class="navLink">
-                    <p onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'})">Home</p>
+                    <p onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'})" id="HomeLink">Home</p>
                     <p onclick="document.getElementById('aboutPage').scrollIntoView({behavior: 'smooth'})">About me</p>
                     <p onclick="document.getElementById('blogPage').scrollIntoView({behavior: 'smooth'})">Blog</p>
                     <p onclick="document.getElementById('contactPage').scrollIntoView({behavior: 'smooth'})">Contact</p>
@@ -31,7 +32,7 @@
                 </div>
             </div>
         </nav>
-        <div class="firstSectionHome">
+        <div class="firstSectionHome" id="sectionHome">
             <div class="textSection">
                 <p class="subTitle">Hi There!</p>
                 <p class="topTitle">My Name is <span>Pellegrino Piccolo</span></p>
@@ -56,12 +57,31 @@
     </div>
 </body>
 <script>
+    src="jquery-3.7.1.min.js"
+    function onScreen(elem, allowElemBehind = false, allowElemAhead = false) {
+        const scrollDist = document.documentElement.scrollTop;
+        const elemOffset = window.scrollY + elem.getBoundingClientRect().top; 
+
+        if (!allowElemBehind && !(elemOffset + elem.offsetHeight > scrollDist))
+            return false;
+        
+        if (!allowElemAhead && !(scrollDist + window.innerHeight > elemOffset))
+            return false;
+
+        return true;
+    }
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
             document.getElementById("nav").classList.add("navScroll")
         } else {
             document.getElementById("nav").classList.remove("navScroll")
+        }
+        var elem = document.getElementById("sectionHome");
+        if(onScreen(elem)){
+            document.getElementById("HomeLink").classList.add("active");
+        }else{
+            document.getElementById("HomeLink").classList.remove("active");
         }
     }
 </script>
