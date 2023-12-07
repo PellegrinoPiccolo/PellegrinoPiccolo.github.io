@@ -5,7 +5,7 @@ body {
 
 .page {
   width: 100%;
-  height: 100vh;
+  height: 100vh !important;
   margin: 0 !important;
 }
 
@@ -92,7 +92,7 @@ body {
   padding: 1px 5% !important;
   position: fixed !important;
   top: 0.5em !important;
-  z-index: 1 !important;
+  z-index: 99 !important;
 }
 .homePage .navScroll .NavbarItem img {
   width: 160px !important;
@@ -224,6 +224,22 @@ body {
   font-size: 40px;
   cursor: pointer;
 }
+.blog .cardSection {
+  width: 92%;
+  margin: 0 4%;
+}
+.blog .cardSection .websiteCards, .blog .cardSection .projectCards {
+  width: 100%;
+  margin: 4em 0 0 0;
+}
+.blog .cardSection .websiteCards .item, .blog .cardSection .projectCards .item {
+  width: 100%;
+}
+.blog .cardSection .websiteCards .item img, .blog .cardSection .projectCards .item img {
+  width: 90%;
+  margin: 0 5% 0 5%;
+  border-radius: 8px;
+}
 
 .active {
   color: #9796E8 !important;
@@ -235,4 +251,5 @@ img {
 
 .hidden {
   opacity: 0 !important;
+  display: none !important;
 }/*# sourceMappingURL=style.css.map */

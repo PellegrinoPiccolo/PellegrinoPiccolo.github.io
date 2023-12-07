@@ -24,7 +24,7 @@
                 <div class="navLink">
                     <p onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'})" id="HomeLink">Home</p>
                     <p onclick="document.getElementById('aboutPage').scrollIntoView({behavior: 'smooth'})" id="AboutLink">About me</p>
-                    <p onclick="document.getElementById('blogPage').scrollIntoView({behavior: 'smooth'})" id="BlockLink">Blog</p>
+                    <p onclick="document.getElementById('blogPage').scrollIntoView({behavior: 'smooth'})" id="BlogLink">Blog</p>
                     <p onclick="document.getElementById('contactPage').scrollIntoView({behavior: 'smooth'})" id="ContactLink">Contact</p>
                 </div>
                 <div class="buttonGithub">
@@ -64,27 +64,33 @@
             </div>
         </div>
     </div>
-    <div class="blog page " id="blogPage">
+    <div class="blog page background1" id="blogPage">
         <div class="titleSection">
-            <p id="websiteCardTitle">Websites</p>
-            <p id="projectCardTitle">Projects</p>
+            <p id="websiteCardTitle" class="active" onclick="visibleCard(this, document.getElementById('projectCardTitle'))">Websites</p>
+            <p id="projectCardTitle" class="" onclick="visibleCard(this, document.getElementById('websiteCardTitle'))">Projects</p>
         </div>
         <div class="cardSection">
-            <div class="websiteCards">
-                <div class="card">
-                    <div class="owl-carousel">
-                        <div> Your Content </div>
-                        <div> Your Content </div>
-                        <div> Your Content </div>
-                        <div> Your Content </div>
-                        <div> Your Content </div>
-                        <div> Your Content </div>
-                        <div> Your Content </div>
-                      </div>
+            <div class="websiteCards owl-carousel owl-theme">
+                <div class="item">
+                    <img src="image/keiben_home.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo">
+                </div>
+                <div class="item">
+                    <img src="image/keiben_product.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo">
+                </div>
+                <div class="item">
+                    <img src="image/keiben_home.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo">
+                </div>
+                <div class="item">
+                    <img src="image/keiben_product.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo">
                 </div>
             </div>
-            <div class="projectCards hidden">
-
+            <div class="projectCards owl-carousel owl-theme hidden">
+                <div class="item">
+                    <img src="image/keiben_home.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo">
+                </div>
+                <div class="item">
+                    <img src="image/keiben_product.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo">
+                </div>
             </div>
         </div>
     </div>
@@ -97,22 +103,17 @@
         $(".owl-carousel").owlCarousel();
     });
     $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
+        loop:false,
+        margin:0,
         responsiveClass:true,
         responsive:{
-            0:{
-                items:1,
-                nav:true
-            },
-            600:{
-                items:3,
-                nav:false
-            },
             1000:{
-                items:5,
+                items:1,
                 nav:true,
-                loop:false
+            },
+            1280:{
+                items:2,
+                nav:true
             }
         }
     })
@@ -128,12 +129,24 @@
 
         return true;
     }
+    function visibleCard(element, element2){
+        element.classList.add("active");
+        element2.classList.remove("active");
+        if(element.id === "websiteCardTitle"){
+            document.querySelector('.websiteCards').classList.remove('hidden');
+            document.querySelector('.projectCards').classList.add('hidden');
+        }else if(element.id === "projectCardTitle"){
+            document.querySelector('.projectCards').classList.remove('hidden');
+            document.querySelector('.websiteCards').classList.add('hidden');
+        }
+    }
     var navPos = document.getElementById("nav").getBoundingClientRect().top;
     document.addEventListener("DOMContentLoaded", () => {
         if(onScreen(document.getElementById("sectionHome"))){
             document.getElementById("HomeLink").classList.add("active");
         }
     });
+
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
         if (document.body.scrollTop > (navPos + 100) || document.documentElement.scrollTop > (navPos + 100)) {
@@ -150,6 +163,11 @@
             document.getElementById("AboutLink").classList.add("active");
         }else{
             document.getElementById("AboutLink").classList.remove("active");
+        }
+        if(onScreen(document.getElementById("websiteCardTitle"))){
+            document.getElementById("BlogLink").classList.add("active");
+        }else{
+            document.getElementById("BlogLink").classList.remove("active");
         }
     }
 </script>
