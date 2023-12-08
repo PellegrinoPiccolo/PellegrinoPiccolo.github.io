@@ -316,4 +316,12 @@ img {
 .hidden {
   opacity: 0 !important;
   display: none !important;
+}
+
+.owl-dot span {
+  background: white !important; /* dots color*/
+}
+
+.owl-dot.active span, .owl-dot:hover span {
+  background: #9796E8 !important; /*active and on hover color*/
 }/*# sourceMappingURL=style.css.map */

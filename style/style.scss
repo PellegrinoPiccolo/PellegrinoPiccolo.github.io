@@ -304,11 +304,8 @@ body{
   }
 
   @keyframes animated-pointer{
-    //from{color: white;}
-    //to{color: transparent;}
     0%   {color:white}
     60%  {color:white}
-    //85% {color:white}
     90% {color:transparent}
   }
 
@@ -336,3 +333,11 @@ img{
     opacity:0 !important;
     display: none !important;
 }
+
+.owl-dot span {
+    background: white !important; /* dots color*/
+  }
+ 
+ .owl-dot.active span, .owl-dot:hover span {
+    background: #9796E8 !important; /*active and on hover color*/
+  }
