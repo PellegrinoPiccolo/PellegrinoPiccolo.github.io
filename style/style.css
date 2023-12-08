@@ -282,11 +282,18 @@ body {
     width: 100%;
   }
 }
+.cursor_pointer {
+  animation: animated-pointer 680ms steps(29, end) 100ms infinite;
+}
+
 @keyframes animated-pointer {
-  from {
+  0% {
     color: white;
   }
-  to {
+  60% {
+    color: white;
+  }
+  90% {
     color: transparent;
   }
 }

@@ -297,12 +297,22 @@ body{
     to{width: 100%;}
   }
   
-  // cursor animations 
+  // pointer animation
   
-  @keyframes animated-pointer{
-    from{color: white;}
-    to{color: transparent;}
+  .cursor_pointer{
+    animation: animated-pointer 680ms steps(29,end) 100ms infinite;
   }
+
+  @keyframes animated-pointer{
+    //from{color: white;}
+    //to{color: transparent;}
+    0%   {color:white}
+    60%  {color:white}
+    //85% {color:white}
+    90% {color:transparent}
+  }
+
+  // cursor animation
 
   @keyframes animated-cursor{
     from{border-right-color: #9796E8;}
