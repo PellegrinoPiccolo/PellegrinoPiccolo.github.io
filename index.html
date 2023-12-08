@@ -89,7 +89,7 @@
                 </div>
             </div>
             <div class="projectCards owl-carousel owl-theme hidden">
-                
+
             </div>
         </div>
     </div>
@@ -131,12 +131,14 @@
     function visibleCard(element, element2){
         element.classList.add("active");
         element2.classList.remove("active");
-        if(element.id === "websiteCardTitle"){
-            document.querySelector('.websiteCards').classList.remove('hidden');
-            document.querySelector('.projectCards').classList.add('hidden');
-        }else if(element.id === "projectCardTitle"){
-            document.querySelector('.projectCards').classList.remove('hidden');
-            document.querySelector('.websiteCards').classList.add('hidden');
+        switch(element.id){
+            case 'websiteCardTitle':
+                document.querySelector('.websiteCards').classList.remove('hidden');
+                document.querySelector('.projectCards').classList.add('hidden');
+                break;
+            case 'projectCardTitle':
+                document.querySelector('.projectCards').classList.remove('hidden');
+                document.querySelector('.websiteCards').classList.add('hidden'); 
         }
     }
     var navPos = document.getElementById("nav").getBoundingClientRect().top;
