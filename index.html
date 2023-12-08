@@ -145,6 +145,9 @@
             case 'projectCardTitle':
                 document.querySelector('.projectCards').classList.remove('hidden');
                 document.querySelector('.websiteCards').classList.add('hidden'); 
+                break;
+            default:
+                Console.log('error');
         }
     }
     var navPos = document.getElementById("nav").getBoundingClientRect().top;
