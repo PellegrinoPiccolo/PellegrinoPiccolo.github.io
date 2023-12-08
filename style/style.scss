@@ -135,7 +135,7 @@ body{
             }
             .topTitle{
                 font-size: 40px;
-                span{
+                .name_span{
                     color:#9796E8;
                 }
             }
@@ -241,7 +241,7 @@ body{
         margin: 0 4%;
         .websiteCards, .projectCards{
             width:100%;
-            margin:4em 0 0 0;
+            margin:8em 0 0 0;
             .item{
                 width: 90%;
                 margin:0 5% 0 5%;
@@ -261,6 +261,57 @@ body{
         }
     }
 }
+
+
+// Start animation code
+.animation_code {
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 28px;
+  color: rgba(255,255,255,.70);
+  width: auto;
+  .textCode{
+    border-right: solid 2px #9796E8;
+    animation: animated-cursor 500ms steps(29,end) 400ms infinite ;
+  }
+
+}
+
+.animation_1 {
+    animation: animated-text 2s steps(29,end) 500ms 1 normal both;
+  }
+  .animation_2 {
+    animation: animated-text 2s steps(29,end) 1s 1 normal both,
+  }
+  .animation_3 {
+    animation: animated-text 2s steps(29,end) 3s 1 normal both,
+  }
+// Animation 
+
+  
+  // text animation 
+  
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 100%;}
+  }
+  
+  // cursor animations 
+  
+  @keyframes animated-pointer{
+    from{color: white;}
+    to{color: transparent;}
+  }
+
+  @keyframes animated-cursor{
+    from{border-right-color: #9796E8;}
+    to{border-right-color: transparent;}
+  }
+
+  // end animation code
+  
+
 
 .active{
     //text-decoration: underline !important;
