@@ -234,6 +234,15 @@ body {
   font-family: "Wellfleet", monospace;
 }
 
+.contacts {
+  padding: 8em 0 0 0;
+}
+.contacts .contactContent {
+  width: 80%;
+  margin: 0 10%;
+  font-size: 20px !important;
+}
+
 .animation_code {
   white-space: nowrap;
   overflow: hidden;

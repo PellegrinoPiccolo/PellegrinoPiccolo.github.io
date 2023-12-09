@@ -64,7 +64,7 @@
                 <button class="linuxButton" title="Switch to windows prompt" onclick="changePrompt($(this), $('.windowsButton'))">
                     <iconify-icon icon="fa6-brands:linux" style="color: white;"></iconify-icon>
                 </button>
-                <p style="font-size:18px;">@PellegrinoPiccolo [Versione 0.8]</p><br>
+                <p style="font-size:18px;">@PellegrinoPiccolo [Version 0.8]</p><br>
                 <p><span class="cursor_pointer cmdStyle linuxCursor">
                     <span class="typePromptText">[PellegrinoPiccolo]:-$</span>
                      Hi there! My name is <span class="colorPrompt">Pellegrino Piccolo</span>
@@ -112,13 +112,19 @@
                 </div>
             </div>
             <div class="projectCards owl-carousel owl-theme hidden">
-
+                
             </div>
         </div>
     </div>
     <div class="contacts page background2" id="contactPage">
-        <div class="contactContent">
-
+        <div class="contactContent divPromptStyle">
+            <button class="windowsButton hidden" onclick="changePrompt($(this), $('.linuxButton'))" title="Switch to linux prompt">
+                <iconify-icon icon="mingcute:windows-fill" style="color: white;"></iconify-icon>
+            </button>
+            <button class="linuxButton" onclick="changePrompt($(this), $('.windowsButton'))" title="Switch to windows prompt">
+                <iconify-icon icon="fa6-brands:linux" style="color: white;"></iconify-icon>
+            </button>
+            <p style="font-size:18px;">@Pellegrino Piccolo [Versione 0.8]</p>
         </div>
     </div>
 </body>
