@@ -57,10 +57,27 @@
     </div>
     <div class="aboutMe page background2" id="aboutPage">
         <div class="presentation" id="sectionAbout">
-            <div class="textSection">
-                <p><span class="cursor_pointer">></span> Hi there! My name is <span>Pellegrino Piccolo</span></p>
-                <p><span class="cursor_pointer">></span> I graduated with the title of <span>"IT expert"</span></p>
-                <p><span class="cursor_pointer">></span> I'm currently studying Computer Science at <span onclick="window.open('https://corsi.unisa.it/informatica')">University of Salerno<iconify-icon icon="solar:link-outline" style="font-size:15px"></iconify-icon> </span> </p>
+            <div class="textSection divPromptStyle">
+                <button class="windowsButton hidden" title="Switch to linux prompt" onclick="changePrompt($(this), $('.linuxButton'))">
+                    <iconify-icon icon="mingcute:windows-fill" style="color: white;"></iconify-icon>
+                </button>
+                <button class="linuxButton" title="Switch to windows prompt" onclick="changePrompt($(this), $('.windowsButton'))">
+                    <iconify-icon icon="fa6-brands:linux" style="color: white;"></iconify-icon>
+                </button>
+                <p style="font-size:18px;">@PellegrinoPiccolo [Versione 0.8]</p><br>
+                <p><span class="cursor_pointer cmdStyle linuxCursor">
+                    <span class="typePromptText">[PellegrinoPiccolo]:-$</span>
+                     Hi there! My name is <span class="colorPrompt">Pellegrino Piccolo</span>
+                </span></p>
+                <p><span class="cursor_pointer cmdStyle linuxCursor">
+                    <span class="typePromptText">[PellegrinoPiccolo]:-$</span>
+                     I graduated with the title of <span class="colorPrompt">"IT expert"</span>
+                </span></p>
+                <p><span class="cursor_pointer cmdStyle linuxCursor">
+                    <span class="typePromptText">[PellegrinoPiccolo]:-$</span>
+                     I'm currently studying Computer Science at 
+                    <span class="colorPrompt" onclick="window.open('https://corsi.unisa.it/informatica')">University of Salerno<iconify-icon icon="solar:link-outline" style="font-size:15px"></iconify-icon> </span>
+                </span> </p>
             </div>
             <div class="imageSection">
                 <img src="image/keiben_home.png" alt="Pellegrino Piccolo - @PellegrinoPiccolo" id="imageKeibenHome">
@@ -100,7 +117,9 @@
         </div>
     </div>
     <div class="contacts page background2" id="contactPage">
+        <div class="contactContent">
 
+        </div>
     </div>
 </body>
 <script>
@@ -148,6 +167,22 @@
                 break;
             default:
                 Console.log('error');
+        }
+    }
+    function changePrompt(element, element2){
+        element2.removeClass("hidden")
+        element.addClass('hidden');
+        textPrompt = $('.typePromptText');
+        cursorPointer = $('.cursor_pointer');
+        var className = $('.element').attr('class');
+        if(element.hasClass('linuxButton')){
+            textPrompt.text('C:\\Users\\PellegrinoPiccolo>');
+            cursorPointer.removeClass('linuxCursor')
+            cursorPointer.addClass('windowsCursor')
+        }else{
+            textPrompt.text('[PellegrinoPiccolo]:-$')
+            cursorPointer.removeClass('windowsCursor')
+            cursorPointer.addClass('linuxCursor')
         }
     }
     var navPos = document.getElementById("nav").getBoundingClientRect().top;

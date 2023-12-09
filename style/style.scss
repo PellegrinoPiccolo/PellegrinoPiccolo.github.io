@@ -171,32 +171,16 @@ body{
         display:flex;
         justify-content: space-between;
         .textSection{
-            background: #060010;
-            padding:20px;
-            width:400px;
+            width:80%;
+            margin: 0 10%;
             height: auto;
-            text-wrap: wrap;
-            border-radius:20px;
-            p{
-                color:white;
-                font-size:20px;
-                font-family: 'Inconsolata', monospace;
-                margin:.5em 0;
-                font-weight: 100;
-                span{
-                    color:#9796E8;
-                }
-                span:hover{
-                    text-decoration: underline;
-                    cursor:pointer;
-                }
-            }
-            
         }
         .imageSection{
             position:relative;
+            width: 90%;
+            margin: 0 5%;
             img{
-                width:580px;
+                width:100%;
                 margin:0;
                 position:absolute;
                 border-radius: 10px;
@@ -271,12 +255,11 @@ body{
   font-size: 28px;
   color: rgba(255,255,255,.70);
   width: auto;
+}
   .textCode{
     border-right: solid 2px #9796E8;
-    animation: animated-cursor 500ms steps(29,end) 400ms infinite ;
+    animation: animated-cursor 1s steps(29,end) 400ms infinite ;
   }
-
-}
 
 .animation_1 {
     animation: animated-text 2s steps(29,end) 500ms 1 normal both;
@@ -287,20 +270,13 @@ body{
   .animation_3 {
     animation: animated-text 2s steps(29,end) 3s 1 normal both,
   }
-// Animation 
+// end animation code
 
-  
-  // text animation 
-  
+// Animation keyframes section
+
   @keyframes animated-text{
     from{width: 0;}
     to{width: 100%;}
-  }
-  
-  // pointer animation
-  
-  .cursor_pointer{
-    animation: animated-pointer 680ms steps(29,end) 100ms infinite;
   }
 
   @keyframes animated-pointer{
@@ -308,17 +284,72 @@ body{
     60%  {color:white}
     90% {color:transparent}
   }
-
-  // cursor animation
-
-  @keyframes animated-cursor{
-    from{border-right-color: #9796E8;}
-    to{border-right-color: transparent;}
-  }
-
-  // end animation code
   
 
+  // cursor color animation 
+
+  @keyframes animated-cursor{
+    0%, 54%{border-right-color: #9796E8;}
+    55%, 100%{border-right-color: transparent;}
+  }
+
+  // cursor white animation
+
+  @keyframes animated-cursor-white{
+    0%, 55%{border-right-color: white;}
+    56%, 100%{border-right-color: transparent;}
+  }
+
+// end animation code
+  
+// Cursor class
+  .cursor_pointer{
+    animation: animated-cursor-white 1s steps(29,end) 100ms infinite;
+    animation-timing-function: linear;
+    color:white !important;
+  }
+
+  .windowsCursor{
+    border-right: 2px solid white;
+  }
+
+  .linuxCursor{
+    border-right: 8px solid white;
+  }
+// end cursor class
+
+// promptStyle
+  .divPromptStyle{
+    text-wrap: wrap;
+    border-radius:20px;
+    position: relative;
+    background: #060010;
+    padding:20px;
+    p{
+        color:white;
+        font-size:20px;
+        font-family: 'Inconsolata', monospace;
+        margin:.5em 0;
+        font-weight: lighter;
+        .colorPrompt{
+            color:#9796E8;
+        }
+        .colorPrompt:hover{
+            text-decoration: underline;
+            cursor:pointer;
+        }
+    }
+    button{
+        position:absolute;
+        top:20px;
+        right:20px;
+        background-color: transparent;
+        cursor: pointer;
+        border:none;
+        font-size:34px;
+    }
+  }
+// end prompt style
 
 .active{
     //text-decoration: underline !important;

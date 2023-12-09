@@ -161,32 +161,17 @@ body {
   justify-content: space-between;
 }
 .aboutMe .presentation .textSection {
-  background: #060010;
-  padding: 20px;
-  width: 400px;
+  width: 80%;
+  margin: 0 10%;
   height: auto;
-  text-wrap: wrap;
-  border-radius: 20px;
-}
-.aboutMe .presentation .textSection p {
-  color: white;
-  font-size: 20px;
-  font-family: "Inconsolata", monospace;
-  margin: 0.5em 0;
-  font-weight: 100;
-}
-.aboutMe .presentation .textSection p span {
-  color: #9796E8;
-}
-.aboutMe .presentation .textSection p span:hover {
-  text-decoration: underline;
-  cursor: pointer;
 }
 .aboutMe .presentation .imageSection {
   position: relative;
+  width: 90%;
+  margin: 0 5%;
 }
 .aboutMe .presentation .imageSection img {
-  width: 580px;
+  width: 100%;
   margin: 0;
   position: absolute;
   border-radius: 10px;
@@ -257,9 +242,10 @@ body {
   color: rgba(255, 255, 255, 0.7);
   width: auto;
 }
-.animation_code .textCode {
+
+.textCode {
   border-right: solid 2px #9796E8;
-  animation: animated-cursor 500ms steps(29, end) 400ms infinite;
+  animation: animated-cursor 1s steps(29, end) 400ms infinite;
 }
 
 .animation_1 {
@@ -282,10 +268,6 @@ body {
     width: 100%;
   }
 }
-.cursor_pointer {
-  animation: animated-pointer 680ms steps(29, end) 100ms infinite;
-}
-
 @keyframes animated-pointer {
   0% {
     color: white;
@@ -298,13 +280,66 @@ body {
   }
 }
 @keyframes animated-cursor {
-  from {
+  0%, 54% {
     border-right-color: #9796E8;
   }
-  to {
+  55%, 100% {
     border-right-color: transparent;
   }
 }
+@keyframes animated-cursor-white {
+  0%, 55% {
+    border-right-color: white;
+  }
+  56%, 100% {
+    border-right-color: transparent;
+  }
+}
+.cursor_pointer {
+  animation: animated-cursor-white 1s steps(29, end) 100ms infinite;
+  animation-timing-function: linear;
+  color: white !important;
+}
+
+.windowsCursor {
+  border-right: 2px solid white;
+}
+
+.linuxCursor {
+  border-right: 8px solid white;
+}
+
+.divPromptStyle {
+  text-wrap: wrap;
+  border-radius: 20px;
+  position: relative;
+  background: #060010;
+  padding: 20px;
+}
+.divPromptStyle p {
+  color: white;
+  font-size: 20px;
+  font-family: "Inconsolata", monospace;
+  margin: 0.5em 0;
+  font-weight: lighter;
+}
+.divPromptStyle p .colorPrompt {
+  color: #9796E8;
+}
+.divPromptStyle p .colorPrompt:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.divPromptStyle button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  font-size: 34px;
+}
+
 .active {
   color: #9796E8 !important;
 }
