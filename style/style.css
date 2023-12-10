@@ -253,7 +253,7 @@ footer .topSection .firstSectionFooter img {
 footer .topSection .firstSectionFooter .iconSectionFooter {
   text-align: center;
 }
-footer .topSection .firstSectionFooter .iconSectionFooter .iconFooter {
+footer .topSection .firstSectionFooter .iconSectionFooter a .iconFooter {
   font-size: 48px;
   margin-left: 0.2em;
 }
