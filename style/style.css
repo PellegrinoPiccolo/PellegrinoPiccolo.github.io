@@ -235,6 +235,52 @@ body {
   font-size: 20px !important;
 }
 
+footer {
+  width: 100%;
+  padding: 2em 0;
+  position: absolute;
+  z-index: 99;
+}
+footer .topSection {
+  width: 60%;
+  margin: 0 30% 0 10%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .topSection .firstSectionFooter img {
+  width: 100%;
+}
+footer .topSection .firstSectionFooter .iconSectionFooter {
+  text-align: center;
+}
+footer .topSection .firstSectionFooter .iconSectionFooter .iconFooter {
+  font-size: 48px;
+  margin-left: 0.2em;
+}
+footer .topSection .linkSectionFooter h4, footer .topSection .linkSectionFooter p {
+  color: white;
+  font-size: 20px;
+  font-family: "Source Code Pro", monospace;
+}
+footer .topSection .linkSectionFooter p {
+  margin-top: 1em;
+}
+footer .topSection .linkSectionFooter p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer .topSection .linkSectionFooter h4 {
+  margin-top: 1.8em;
+}
+footer .bottomText {
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  font-size: 14px;
+  color: white;
+  margin: 4em 0 1em 0;
+  padding: 0;
+}
+
 .animation_code {
   white-space: nowrap;
   overflow: hidden;
