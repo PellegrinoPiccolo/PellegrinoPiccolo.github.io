@@ -117,16 +117,29 @@
         </div>
     </div>
     <div class="contacts page background2" id="contactPage">
-        <div class="contactContent divPromptStyle">
+        <div class="contactContent divPromptStyle" id="contactPageLink">
             <button class="windowsButton hidden" onclick="changePrompt($('.windowsButton'), $('.linuxButton'))" title="Switch to linux prompt">
                 <iconify-icon icon="mingcute:windows-fill" style="color: white;"></iconify-icon>
             </button>
             <button class="linuxButton" onclick="changePrompt($('.linuxButton'), $('.windowsButton'))" title="Switch to windows prompt">
                 <iconify-icon icon="fa6-brands:linux" style="color: white;"></iconify-icon>
             </button>
-            <p style="font-size:18px;">@Pellegrino Piccolo [Versione 0.8]</p>
+            <p style="font-size:18px;margin-bottom: 2em;">@Pellegrino Piccolo [Versione 0.8]</p>
+            <p>
+                <span class="cursor_pointer cmdStyle linuxCursor">
+                    <span class="typePromptText">[PellegrinoPiccolo]:-$</span>
+                     You can contact me on Email: <a href="mailto:piccolopellegrino22@gmail.com">pellegrinopiccolo22@gmail.com</a>
+                </span>
+            </p>
+            <p>
+                <span class="cursor_pointer cmdStyle linuxCursor">
+                    <span class="typePromptText">[PellegrinoPiccolo]:-$</span>
+                     You can visit my <a href="https://github.com/PellegrinoPiccolo/" target="_blank">Github profile</a>
+                </span>
+            </p>
         </div>
     </div>
+
 </body>
 <script>
     $(document).ready(function(){
@@ -219,6 +232,11 @@
             document.getElementById("BlogLink").classList.add("active");
         }else{
             document.getElementById("BlogLink").classList.remove("active");
+        }
+        if(onScreen(document.getElementById("contactPageLink"))){
+            document.getElementById("ContactLink").classList.add("active");
+        }else{
+            document.getElementById("ContactLink").classList.remove("active");
         }
     }
 </script>
