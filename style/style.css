@@ -378,6 +378,7 @@ footer .bottomText {
   font-family: "Inconsolata", monospace;
   margin: 0.5em 0;
   font-weight: lighter;
+  word-wrap: break-word;
 }
 .divPromptStyle p .colorPrompt {
   color: #9796E8;
@@ -542,7 +543,7 @@ img {
     margin: 0;
   }
   .aboutMe .presentation .textSection p {
-    font-size: 18px !important;
+    font-size: 18px;
   }
   .aboutMe .presentation .imageSection {
     width: 60%;
@@ -618,7 +619,10 @@ img {
     font-size: 28px !important;
   }
   .aboutMe .presentation .textSection p {
-    font-size: 14px !important;
+    font-size: 18px;
+  }
+  .aboutMe .presentation .textSection .promptTitle {
+    font-size: 12px !important;
   }
   .aboutMe .presentation .imageSection img {
     width: 100%;
@@ -646,7 +650,10 @@ img {
     font-size: 28px !important;
   }
   .contacts .contactContent p {
-    font-size: 14px !important;
+    font-size: 18px;
+  }
+  .contacts .contactContent .promptTitle {
+    font-size: 12px !important;
   }
   footer .topSection {
     width: 90%;
