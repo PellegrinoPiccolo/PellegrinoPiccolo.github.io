@@ -579,4 +579,91 @@ img {
     width: 80%;
     margin: 0 15% 0 5%;
   }
+}
+@media screen and (max-width: 800px) {
+  .page {
+    padding-top: 6em !important;
+  }
+  .homePage nav {
+    top: 1em;
+  }
+  .homePage nav .NavbarItem img {
+    width: 140px !important;
+    height: 80px !important;
+  }
+  .homePage nav .NavbarItem .buttonGithub .githubButton .iconGithub {
+    font-size: 24px;
+  }
+  .homePage nav .NavbarItem .buttonGithub .githubButton p {
+    font-size: 14px;
+    margin: 0.3em 0 0 0.4em;
+  }
+  .homePage .navScroll {
+    border-radius: 10px !important;
+  }
+  .homePage .navScroll .NavbarItem img {
+    width: 120px !important;
+    height: 80px !important;
+  }
+  .homePage .firstSectionHome .textSection .topTitle {
+    font-size: 20px;
+  }
+  .homePage .firstSectionHome .textSection .subTitle {
+    font-size: 18px;
+  }
+  .homePage .firstSectionHome .textSection button p {
+    font-size: 18px;
+  }
+  .aboutMe .presentation .textSection button {
+    font-size: 28px !important;
+  }
+  .aboutMe .presentation .textSection p {
+    font-size: 14px !important;
+  }
+  .aboutMe .presentation .imageSection img {
+    width: 100%;
+    margin: 0;
+    border-radius: 4px;
+  }
+  .blog {
+    height: 80vh !important;
+  }
+  .blog .titleSection p {
+    font-size: 24px;
+  }
+  .blog .cardSection .websiteCards .item img, .blog .cardSection .projectCards .item img {
+    width: 100%;
+    margin: 0;
+  }
+  .blog .cardSection .websiteCards .item p, .blog .cardSection .projectCards .item p {
+    font-size: 18px;
+    margin: 1em 6% 0.4em 6%;
+  }
+  .contacts .contactContent {
+    margin: 0 4%;
+  }
+  .contacts .contactContent button {
+    font-size: 28px !important;
+  }
+  .contacts .contactContent p {
+    font-size: 14px !important;
+  }
+  footer .topSection {
+    width: 90%;
+    margin: 0 10% 0 0;
+  }
+  footer .topSection .firstSectionFooter {
+    width: 90%;
+    margin: 0 10% 0 0;
+  }
+  footer .topSection .firstSectionFooter img {
+    width: 80%;
+    margin: 0 10%;
+  }
+  footer .topSection .firstSectionFooter .iconSectionFooter .iconFooter {
+    font-size: 38px !important;
+  }
+  footer .topSection .linkSectionFooter h4, footer .topSection .linkSectionFooter p {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=style.css.map */
