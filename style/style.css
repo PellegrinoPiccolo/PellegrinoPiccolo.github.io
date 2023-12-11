@@ -414,4 +414,70 @@ img {
 
 .owl-dot.active span, .owl-dot:hover span {
   background: #9796E8 !important; /*active and on hover color*/
+}
+
+.owl-nav {
+  display: none !important;
+}
+
+@media screen and (max-width: 1400px) {
+  .page {
+    height: 88vh !important;
+  }
+  .homePage nav .NavbarItem img {
+    width: 220px !important;
+    height: 140px !important;
+  }
+  .homePage nav .NavbarItem .navLink p {
+    font-size: 24px;
+    margin: 2em 1.4em 0 0;
+  }
+  .homePage .firstSectionHome .textSection .topTitle {
+    font-size: 28px;
+  }
+  .homePage .firstSectionHome .textSection .subTitle {
+    font-size: 20px;
+  }
+  .homePage .firstSectionHome .textSection button p {
+    font-size: 20px;
+  }
+  .homePage .firstSectionHome .imageSection img {
+    width: 90%;
+    margin: 0 5%;
+  }
+  .aboutMe .presentation {
+    width: 90%;
+    padding: 0 5%;
+    margin: 0 !important;
+  }
+  .aboutMe .presentation .textSection {
+    width: 90%;
+    margin: 0 5%;
+  }
+  .aboutMe .presentation .imageSection #imageKeibenHome {
+    right: 2em;
+  }
+  .aboutMe .presentation .imageSection #imageKeibenProduct {
+    right: 0.8em;
+    top: 4.8em;
+  }
+  .aboutMe .presentation .imageSection #imageMiviHome {
+    top: 10em;
+  }
+  .aboutMe .presentation .imageSection #imageMiviProduct {
+    right: 2em;
+    top: 15em;
+  }
+  .blog .cardSection .websiteCards, .blog .cardSection .projectCards {
+    margin: 4em 0 0 0;
+  }
+  .blog .cardSection .websiteCards .item img, .blog .cardSection .projectCards .item img {
+    width: 70%;
+    margin: 0 15%;
+  }
+  .blog .cardSection .websiteCards .item p, .blog .cardSection .projectCards .item p {
+    width: 68%;
+    margin: 1em 16% 0.8em 16%;
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
