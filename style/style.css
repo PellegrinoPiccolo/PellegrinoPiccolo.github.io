@@ -89,6 +89,14 @@ body {
   transform: scale(1.1);
   cursor: pointer;
 }
+.homePage nav .NavbarItem .menuSection .buttonMenu {
+  background: transparent;
+  border: none;
+  font-size: 50px;
+  position: relative;
+  top: 0.7em;
+  display: none;
+}
 .homePage .navScroll {
   padding: 1px 5% !important;
   position: fixed !important;
@@ -479,5 +487,96 @@ img {
     width: 68%;
     margin: 1em 16% 0.8em 16%;
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .page {
+    padding-top: 4em !important;
+    height: 100vh !important;
+  }
+  .homePage nav .NavbarItem {
+    display: flex;
+    justify-content: space-between;
+  }
+  .homePage nav .NavbarItem img {
+    width: 180px !important;
+    height: 100px !important;
+    position: relative;
+    top: 1em;
+  }
+  .homePage nav .NavbarItem .navLink {
+    display: none;
+  }
+  .homePage nav .NavbarItem .buttonGithub .githubButton .iconGithub {
+    font-size: 30px;
+  }
+  .homePage nav .NavbarItem .buttonGithub .githubButton p {
+    font-size: 18px;
+    margin: 8px 0 4px 8px;
+  }
+  .homePage .firstSectionHome {
+    margin: 9em 0 0 0;
+  }
+  .homePage .firstSectionHome .textSection .topTitle {
+    font-size: 40px;
+  }
+  .homePage .firstSectionHome .textSection .subTitle {
+    font-size: 34px;
+  }
+  .homePage .firstSectionHome .textSection button {
+    margin: 4em 0 0 0;
+  }
+  .homePage .firstSectionHome .textSection button p {
+    font-size: 30px;
+  }
+  .homePage .firstSectionHome .imageSection {
+    display: none;
+  }
+  .aboutMe .presentation {
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 0 5%;
+  }
+  .aboutMe .presentation .textSection {
+    width: 100%;
+    margin: 0;
+  }
+  .aboutMe .presentation .textSection p {
+    font-size: 18px !important;
+  }
+  .aboutMe .presentation .imageSection {
+    width: 60%;
+    margin: 0 20%;
+  }
+  .aboutMe .presentation .imageSection #imageKeibenHome {
+    top: 4em;
+    right: 4em;
+  }
+  .aboutMe .presentation .imageSection #imageKeibenProduct {
+    top: 7em;
+  }
+  .aboutMe .presentation .imageSection #imageMiviProduct {
+    top: 14em;
+    right: -3.8em;
+  }
+  .blog .cardSection .websiteCards .item img, .blog .cardSection .projectCards .item img {
+    width: 90%;
+    margin: 0 5%;
+  }
+  .blog .cardSection .websiteCards .item p, .blog .cardSection .projectCards .item p {
+    width: 88%;
+    margin: 1em 6% 0.8em 6%;
+    font-size: 24px;
+  }
+  .contacts {
+    height: 80vh !important;
+  }
+  .contacts .contactContent {
+    width: 80%;
+    margin: 0 8%;
+  }
+  footer .topSection {
+    width: 80%;
+    margin: 0 15% 0 5%;
   }
 }/*# sourceMappingURL=style.css.map */
