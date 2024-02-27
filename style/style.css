@@ -218,15 +218,17 @@ body {
 }
 .blog .cardSection .websiteCards, .blog .cardSection .projectCards {
   width: 100%;
-  margin: 8em 0 0 0;
+  margin: 5.4em 0 0 0;
 }
 .blog .cardSection .websiteCards .item, .blog .cardSection .projectCards .item {
-  width: 90%;
-  margin: 0 5% 0 5%;
+  width: 50%;
+  margin: 0 25% 0 25%;
 }
 .blog .cardSection .websiteCards .item img, .blog .cardSection .projectCards .item img {
   width: 100%;
   border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .blog .cardSection .websiteCards .item p, .blog .cardSection .projectCards .item p {
   width: 95%;
